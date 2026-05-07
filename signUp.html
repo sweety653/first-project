@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-signup">
+  <form class="form-wrap" onsubmit="register(event)">
+    <h2>Регистрация</h2>
+
+    <div class="field">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Введи имя" required>
+    </div>
+
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@exampel.ru" required>
+    </div>
+
+    <div class="field">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Введите пароль" required>
+    </div>
+
+    <button type="submit" class="btn">Зарегистрироваться</button>
+
+    <div id="msg"></div>
+
+    <p class="switch-link">Уже есть аккаунт? <a href="signIn.html">Войти</a></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

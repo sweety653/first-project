@@ -1,0 +1,635 @@
+/*SIGNUP- Регистрация*/
+.page-signup {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e123ae, #ffffff);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.page-signup .form-wrap {
+    box-shadow: 4px 8px 24px rgba(0,0,0,0.57);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 320px;
+}
+.page-signup h2 {
+    margin: 0 24px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    position: relative;  top: -5px;right: 30px;
+}
+
+.page-signup .field {
+    margin-bottom: 16px;
+}
+
+.page-signup label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600px;
+    color: black;
+    margin-bottom: 16px;
+    position: relative; top: 5px;
+}
+
+.page-signup input {
+    width: 100%;
+    border-radius: 60px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 13px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border .2s;
+    padding: 8px 14px;
+}
+
+
+.page-signup input:focus {
+    border-color: #0596b3;
+}
+
+
+.page-signup .btn {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    margin-top: 16px;
+    transition: .2s;
+    cursor: pointer;
+    background-color: #b429ff;
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+
+.page-signup .btn:hover {
+    background-color: #a600ff;
+}
+
+.page-signup #msg {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/*FAKEBOOK- главная страница*/
+
+.page-fakebook {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
+    sans-serif; 
+    background: #f1f5f9;
+    color: #1f2937;
+}
+
+/*HEADER- шапка сайта*/
+.page-fakebook .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: #fff;
+    box-shadow: 4px 8px 24px 0px rgba(0,0,0,0.36);
+}
+
+.page-fakebook .logo {
+    font-size: 20px; 
+    font-weight: 700;
+    color: #6366f1;
+}
+
+.page-fakebook .main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.page-fakebook .main-nav a {
+    color: #374151;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.page-fakebook .main-nav a:hover {
+    color: #6366f1;
+}
+
+/*main - основной контент*/
+
+.page-fakebook .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/*SECTIOM - тематические блоки*/
+.page-fakebook .hero {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    padding: 48px 32px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.page-fakebook .hero h1 {
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+
+.page-fakebook .hero p {
+    margin: 0;
+    opacity: .9;
+}
+
+.page-fakebook .content-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:24px;
+}
+
+@media (max-width: 720px) { .content-row { grid-template-columns: 1fr; } }
+
+.page-fakebook .articles h2 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+/*ARTICLE - самостоятельный блок*/
+
+.page-fakebook .post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);   
+}
+
+.page-fakebook .post h3 {
+    margin: 0 0 4px;
+}
+
+.page-fakebook .meta {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 0 0 12px;
+}
+
+.page-fakebook .post p:last-child {
+    margin: 0;
+    line-height: 1.55;
+    color: #4b5563;
+}
+
+/*ASIDE - боковая панель*/
+
+.page-fakebook .sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    height: fit-content;
+}
+
+.page-fakebook .sidebar h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: #1f2937;
+}
+
+.page-fakebook .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.page-fakebook .sidebar li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.page-fakebook .sidebar li:last-child {
+   border: 0;
+}
+
+.page-fakebook .ad {
+    background: #fef3c7;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin: 0;
+}
+
+/*FOOTER - подвал*/
+
+.page-fakebook .site-footer {
+    background: #1f2937;
+    color: #d1d5db;
+    text-align: center;
+    padding: 24px;
+    margin-top: 48px;
+    font-size: 14px;
+}
+
+.page-fakebook .site-footer p {
+    margin: 4px 0;
+}
+
+.page-fakebook .Contacts {
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+/*SIGNIN - Войти*/
+
+.page-signIn {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e123ae, #ffffff);
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-signIn .form-In {
+    box-shadow: 4px 8px 24px rgba(0,0,0,0.57);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 320px;
+}
+
+.page-signIn h2 {
+    margin: 0 24px;
+    font-size: 20px;
+    margin-bottom: 12px;
+    position: relative;  top: -5px;right: 30px;
+}
+
+.page-signIn .field-In {
+    margin-bottom: 16px;
+}
+
+.page-signIn label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600px;
+    color: black;
+    margin-bottom: 16px;
+    position: relative; top: 5px;
+}
+
+.page-signIn input {
+    border-radius: 60px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 13px;
+    box-sizing: border-box;
+    outline: none;
+    transition:border .2s;
+    width: 300px;
+}
+
+
+.page-signIn input:focus {
+    border-color: black;
+}
+
+
+.page-signIn .btn {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    margin-top: 16px;
+    transition: .2s;
+    cursor: pointer;
+    background-color: #4346fe;
+    color:white;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.page-signIn .btn:hover {
+    background-color: #3234c8;
+}
+
+.page-signIn .btn1 {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.page-signIn .btn1:hover {
+    background-color: #c9c9c9;
+}
+
+.page-signIn #msg {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.switch-link {
+    margin-top: 16px;
+    font-size: 13px;
+    text-align: center;
+    color: #6b7280;
+}
+
+.switch-link a {
+    color: #b429ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
+
+
+/*RECOVERY - Востановления пароля*/
+
+.page-recovery {
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.page-recovery .recovery {
+    box-shadow: 4px 8px 24px rgba(0,0,0,0.57);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 320px
+}
+
+.page-recovery h2 {
+    margin: 0 24px;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.page-recovery .recover {
+    margin-bottom: 16px;
+}
+
+.page-recovery label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600px;
+    color: black;
+    margin-bottom: 16px;
+    position: relative; top: 5px;
+}
+
+.page-recovery input {
+    border-radius: 60px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 13px;
+    box-sizing: border-box;
+    outline: none;
+    transition:border .2s;
+    width: 300px;
+}
+
+
+.page-recovery input:focus {
+    border-color: black;
+}
+
+.page-recovery .btn2 {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    display: block;
+    margin: 0 auto;
+    background-color: #4346fe;
+    color:white;
+}
+
+.page-recovery .btn2:hover {
+    background-color: #3234c8;
+}
+
+.page-signIn #msg {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/*Recov - восстановления пароля*/
+
+.page-recove {
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.page-recove .recov {
+    box-shadow: 4px 8px 24px rgba(0,0,0,0.57);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 320px
+}
+
+.page-recove h2 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.page-recove label {
+    display: block;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 16px;
+    position: relative; top: 5px;
+}
+
+.page-recove input {
+    border-radius: 60px;
+    border: 1.5px solid #e5e7eb;
+    font-size: 13px;
+    box-sizing: border-box;
+    outline: none;
+    transition:border .2s;
+    width: 100%;
+}
+
+.page-recove .reco {
+    margin-bottom: 16px;
+}
+
+
+.page-recove input:focus {
+    border-color: black;
+}
+
+.page-recove .btn3 {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    display: block;
+    margin: 20px auto 0;    
+    background-color: #4346fe;
+    color:white;
+}
+
+.page-recove .btn3:hover {
+    background-color: #3234c8;
+}
+
+.page-recove #msg {
+    margin-top: 12px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/*AboutUS- О нас*/
+
+.page-AboutUs {
+    min-height: 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-AboutUs .Us {
+    box-shadow: 4px 8px 24px rgba(0,0,0,0.57);
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 320px
+}
+
+.page-recove h1 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.page-AboutUs .btn {
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    padding: 10px;
+    transition: .2s;
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    display: block;
+    margin: 20px auto 0;    
+    background-color: #4346fe;
+    color:white;
+    text-align: center;
+}
+
+.page-AboutUs .btn:hover {
+    background-color: #3234c8;
+}
+
+/*Profile*/
+
+.page-profil { margin:0; font-family:system-ui,sans-serif; background:#f1f5f9; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:20px; }
+.page-profil .profile { background:#fff; border-radius:18px; padding:32px; max-width:340px; width:100%; text-align:center; box-shadow:0 10px 40px rgba(0,0,0,.08); }
+.page-profil .avatar { width:96px; height:96px; border-radius:50%; background:linear-gradient(135deg,#f97316,#ec4899); margin:0 auto 16px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:32px; font-weight:700; }
+.page-profil .profile h2 { margin:0 0 4px; font-size:22px; }
+.page-profil .role { color:#6b7280; margin:0 0 12px; font-size:14px; }
+.page-profil .bio { color:#374151; margin:0 0 20px; line-height:1.5; }
+.page-profil .stats { display:flex; justify-content:space-around; padding:16px 0; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; margin-bottom:20px; }
+.page-profil .stats div { display:flex; flex-direction:column; }
+.page-profil .stats strong { font-size:18px; }
+.page-profil .stats span { font-size:11px; color:#6b7280; text-transform:uppercase; letter-spacing:.5px; }
+.page-profil .actions { display:flex; gap:8px; }
+.page-profil .actions button { flex:1; padding:10px; border-radius:8px; border:none; cursor:pointer; font-weight:600; font-size:14px; }
+.page-profil .follow { background:#6366f1; color:#fff; }
+.page-profil .msg { background:#f3f4f6; color:#374151; }
+.page-profil .bio-input { width:100%; padding:8px 12px; border-radius:8px; border:1.5px solid #e5e7eb; font-size:14px; outline:none; box-sizing:border-box; margin-bottom:4px; }
+.page-profil .bio-input:focus { border-color:#6366f1; }
+
+/*Ocenka*/
+
+.Ocenka {
+    margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#0f172a,#581c87); font-family:system-ui,sans-serif;
+}
+
+.Ocenka .container {
+    text-align:center; color:#fff;
+}
+
+.Ocenka h2 {
+    margin-bottom:24px;
+}
+
+.Ocenka .stars {
+    font-size:54px; cursor:pointer; user-select:none;
+}
+
+.Ocenka .stars span {
+    color:#475569; transition:color .15s, transform .15s; display:inline-block;
+}
+
+.Ocenka .stars span:hover {
+    transform:scale(1.2);
+}
+
+.Ocenka .stars span.active {
+    color:#fbbf24; text-shadow:0 0 16px rgba(251,191,36,.5);
+}
+
+.Ocenka .result {
+    margin-top:20px; font-size:18px; min-height:32px;
+}
+
+
+
+

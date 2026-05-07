@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-profil">
+    <a href="index.html" style="position:fixed;top:16px;left:16px;text-decoration:none;color:#6366f1;font-weight:600;font-size:14px;">← Главная</a>
+    <div class="profile">
+        <div class="avatar" id="avatar"></div>
+        <h2 id="username"></h2>
+
+        <p class="bio" id="bio-text"></p>
+        <input class="bio-input" id="bio-input" type="text" maxlength="80" placeholder="Напиши что-нибудь о себе..." style="display:none;">
+
+        <div class="stats">
+            <div><strong id="stat-posts">0</strong><span>Постов</span></div>
+            <div><strong id="stat-followers">0</strong><span>Подписчиков</span></div>
+            <div><strong id="stat-following">0</strong><span>Подписок</span></div>
+        </div>
+        <div class="actions">
+            <button class="follow" id="edit-bio-btn">Изменить описание</button>
+            <button class="msg" id="logout-btn">Выйти</button>
+        </div>
+    </div>
+
+    <script>
+        const user = JSON.parse(localStorage.getItem('currentUser'));
+        if (!user) {
+            window.location.replace('signUp.html');
+        }
+
+        const words = user.name.trim().split(' ');
+        const initials = words.length >= 2
+            ? (words[0][0] + words[1][0]).toUpperCase()
+            : user.name.slice(0, 2).toUpperCase();
+
+        document.getElementById('avatar').textContent = initials;
+        document.getElementById('username').textContent = user.name;
+
+        const bioKey = 'bio_' + user.email;
+        const bioText = document.getElementById('bio-text');
+        const bioInput = document.getElementById('bio-input');
+        const editBtn = document.getElementById('edit-bio-btn');
+
+        function loadBio() {
+            const saved = localStorage.getItem(bioKey) || '';
+            bioText.textContent = saved || 'Нет описания';
+        }
+        loadBio();
+
+        editBtn.addEventListener('click', () => {
+            if (bioInput.style.display === 'none') {
+                bioInput.value = localStorage.getItem(bioKey) || '';
+                bioInput.style.display = 'block';
+                bioText.style.display = 'none';
+                editBtn.textContent = 'Сохранить';
+                bioInput.focus();
+            } else {
+                localStorage.setItem(bioKey, bioInput.value.trim());
+                bioInput.style.display = 'none';
+                bioText.style.display = 'block';
+                editBtn.textContent = 'Изменить описание';
+                loadBio();
+            }
+        });
+
+        const statsKey = 'stats_' + user.email;
+        const stats = JSON.parse(localStorage.getItem(statsKey) || '{"posts":0,"followers":0,"following":0}');
+        document.getElementById('stat-posts').textContent = stats.posts;
+        document.getElementById('stat-followers').textContent = stats.followers;
+        document.getElementById('stat-following').textContent = stats.following;
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('currentUser');
+            window.location.href = 'signIn.html';
+        });
+    </script>
+</body>
+</html>

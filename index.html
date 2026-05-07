@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Main</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (!localStorage.getItem('currentUser')) {
+            window.location.replace('signUp.html');
+        }
+    </script>
+</head>
+<body class="page-fakebook">
+    <header class="site-header">
+        <div class="logo">FakeBook</div>
+        <nav class="main-nav">
+            <a href="signUp.html">Регистрация</a>
+            <a href="signIn.html">Войти</a>
+            <a href="aboutUs.html">О нас</a>
+            <a href="Profile.html">Профиль</a>
+            <a href="Ocenka.html">Оценка сайта</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <h1>Добро пожаловать</h1>
+            <p>Мой первый такой крупный проект где соединяю не 2 html файла а больше вау</p>
+        </section>
+
+        <div class="content-row">
+            <section class="articles">
+                <h2>Последние новости</h2>
+
+                <article class="post">
+                    <h3>Масштабный редизайн</h3>
+                    <p class="meta">📅 2 мая · ✍️ sweety</p>
+                    <p>Fakebook переходит на более «чистый» и минималистичный вид.</p>
+                </article>
+
+
+                <article class="post">
+                    <h3>Новый редактор постов</h3>
+                    <p class="meta">📅 2 мая · ✍️ sweety</p>
+                    <p>Пользовательский интерфейс для создания публикаций стал проще и современнее.</p>
+                </article>
+
+                <article class="post">
+                    <h3>Никнеймы в группах</h3>
+                    <p class="meta">📅 2 мая · ✍️ sweety</p>
+                    <p>Теперь в группах можно публиковать посты под никнеймом, не раскрывая свое полное имя (но оставаясь идентифицируемым для платформы).</p>
+                </article>
+            </section>
+
+            <aside class="sidebar">
+                <h3>Категории</h3>
+                <ul>
+                    <li>AI-персонализация рекламы</li>
+                    <li>Приоритет «оригинальности»</li>
+                    <li>ИИ-коллажи</li>
+                </ul>
+                <h3>Рекламы</h3>
+                <p class="ad">Professional Mode: Fakebook активно подталкивает обычных пользователей переключать профили в «профессиональный режим»</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>@ 2026 Fakebook · Все права идут куда то</p>
+        <p class="Contacts">📧 fakebook@gmail.com · 📱 +7 (777) 777-77-77</p>
+    </footer>
+</body>
+</html>
